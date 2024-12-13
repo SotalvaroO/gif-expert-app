@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import CustomSkeleton from "./Components/CustomSkeleton";
 import CustomSearchBar from "./CustomSearchBar";
 import { useGifService } from "./hooks/useGifService";
@@ -8,7 +8,6 @@ import { GifModel } from "./services/GifServiceImpl";
 export const GifExpertApp = () => {
   const gifService = useGifService();
   const [gifs, setGifs] = useState<GifModel[] | null>(null);
-  const [isButtonClicked, setIsButtonClicked] = useState(false);
   const [searchValue, setSearchValue] = useState("");
 
   const handleSearchChange = (value: string) => {
@@ -21,8 +20,7 @@ export const GifExpertApp = () => {
       gifService
         .fetchGifs(searchValue)
         .then(setGifs)
-        .catch((err) => console.error("Error fetching GIFs:", err))
-        .finally(() => setIsButtonClicked(false));
+        .catch((err) => console.error("Error fetching GIFs:", err));
     } else {
       console.warn("El valor de búsqueda está vacío.");
     }
