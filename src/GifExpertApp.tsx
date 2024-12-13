@@ -29,7 +29,7 @@ export const GifExpertApp = () => {
   return (
     <>
       <section className="container mx-auto px-4 py-8">
-        <h1 className="text-4xl font-bold mb-8 text-center">Goku</h1>
+        <h1 className="text-4xl font-bold mb-8 text-center">Gifs App</h1>
       </section>
       <section className="container mx-auto px-4">
         <CustomSearchBar
