@@ -1,6 +1,5 @@
 import Masonry from "react-masonry-css";
 import { GifModel } from "../services/GifServiceImpl";
-import "./styles.css";
 
 interface CustomGridModel {
   gifs: GifModel[];
