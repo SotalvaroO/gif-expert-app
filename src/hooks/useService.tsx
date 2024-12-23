@@ -1,7 +1,8 @@
 import { useContext } from "react";
-import { ServiceContext } from "../services/GifServiceImpl";
+import { ServiceContext } from "../provider/ServiceProvider";
 
-export const useGifService = () => {
+
+export const useService = () => {
 
   const context = useContext(ServiceContext);
   if (!context) {

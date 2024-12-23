@@ -1,6 +1,6 @@
 import React, { ChangeEvent } from "react";
-import CustomButton from "./Components/CustomButton";
-import CustomInput from "./Components/CustomInput";
+import CustomButton from "./CustomButton";
+import CustomInput from "./CustomInput";
 
 interface CustomSearchBarModel {
   onSearchChange: (value: string) => void;
